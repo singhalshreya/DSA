@@ -13,5 +13,5 @@ return ans;
 int main(){
   int x;
   cin>>x;
-cout<<"Factorial is "<<factorial(x)<<endl;
+  cout<<"Factorial is "<<factorial(x)<<endl;
 }
