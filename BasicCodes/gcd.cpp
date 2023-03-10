@@ -14,12 +14,16 @@ return gcdf;
 
 // recusion
 int gcd1(int num1,int num2){
-  
+    if(num2==0){
+        return num1;
+    }
+  int small = gcd1(num1, num2%num1);
+  return small;
 }
 
 int main(){
     int num1,num2;
     cout<<"Enter num1 and num2: ";
     cin>>num1>>num2;
-    cout<<gcd(num1,num2);
+    cout<<gcd1(num1,num2);
 }
