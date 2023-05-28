@@ -4,6 +4,7 @@
 
 
 // int main(){
+  // iterative
 //   int n;
 //   cin>>n;
 //     int a =0,b=1;
@@ -25,6 +26,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// recursive
 int fib(int n){
   if(n==0){
     return 0;
