@@ -7,8 +7,28 @@
 #include<iostream>
 using namespace std;
 
+int f(int index, vector<int> &heights,vector<int> &dp ){
+    // recursion to memoization
+    if(index==0){
+        return 0;
+    }
+    if(dp[index] != -1){
+        return dp[index];
+    }
+    int e1 = f(index-1, heights, dp) + abs(heights[index] - heights[index-1]);
+      int e2 = INT_MAX; 
+      if(index>1){
+           e2 = f(index-2, heights, dp) + abs(heights[index] - heights[index-2]);
+      }  
+      return dp[index] = min(e1,e2);
+}
+
 int frogJump(int n, vector<int> &heights)
 {
+    // recursive call for helper function
+    // vector<int> dp(n+1,-1);
+    // return f(n-1, heights, dp);
+
     // Tabulation
     vector<int> dp(n,0);
     dp[0] = 0;
