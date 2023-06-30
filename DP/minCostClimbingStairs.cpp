@@ -39,6 +39,17 @@ int helper(int index,int N, vector<int> &cost, vector<int> &dp){
         return min(ans1, ans2);
     }
 
+    int tab(int N, vector<int> &cost){
+    // Tabulation
+        int dpp[N];
+        dpp[0] = cost[0];
+        dpp[1] = cost[1];
+        for(int i=2;i<N;i++){
+            dpp[i] = cost[i] + min(dpp[i-1], dpp[i-2]);
+        }
+        return dpp[N-1] = min(dpp[N-1], dpp[N-2]);
+
+}
 
     int main(){
         int N;
@@ -48,4 +59,8 @@ int helper(int index,int N, vector<int> &cost, vector<int> &dp){
             cin>>cost[i];
         }
         cout<<minCostClimbingStairs(cost, N);
+
+        cout<<""<<endl;
+        cout<<tab(N, cost);
+
     }
