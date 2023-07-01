@@ -58,5 +58,13 @@ int helper2(int index, int *arr, vector<int> &dp){
         vector<int> dp(n+1,-1);
         cout<<findMaxSum(arr, n, dp);
 
-        // tabulation
+        // Tabulation
+        vector<int> dpp(n,0);
+        dpp[0] = arr[0];
+        int max_ans = INT_MAX;
+        for(int i=1;i<n;i++){
+            
+            dpp[i] = 
+        }
+
     }
