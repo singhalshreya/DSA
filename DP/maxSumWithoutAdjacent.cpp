@@ -62,9 +62,9 @@ int helper2(int index, int *arr, vector<int> &dp){
         vector<int> dpp(n,0);
         dpp[0] = arr[0];
         int max_ans = INT_MAX;
-        for(int i=1;i<n;i++){
+        // for(int i=1;i<n;i++){
             
-            dpp[i] = 
-        }
+        //     dpp[i] = 
+        // }
 
     }
