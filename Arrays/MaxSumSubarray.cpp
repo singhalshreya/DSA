@@ -21,7 +21,6 @@ int maxSubArray(vector<int>& nums) {
             if(sum>maxi){
                 maxi = sum;
             }
-
             if(sum<0){
                 sum = 0;
             }
