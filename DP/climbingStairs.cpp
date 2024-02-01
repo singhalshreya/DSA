@@ -18,11 +18,12 @@ int climbStairs(int n) {
         // memoization
         int dp[n+1];
         memset(dp, -1, sizeof(dp));
-        // if(n==0 || n==1){
-        //     return 1;
-        // }
-        // return dp[n] =  climbStairs(n-1) + climbStairs(n-2); 
-        // Tabulation
+    //     // if(n==0 || n==1){
+    //     //     return 1;
+    //     // }
+    //     // return dp[n] =  climbStairs(n-1) + climbStairs(n-2); 
+
+    //     // Tabulation
         dp[0] = 1;
         dp[1] = 1;
 
@@ -31,13 +32,14 @@ int climbStairs(int n) {
         }
     return dp[n];
 // recursive
-        // if(n==0){
-        //     return 1;
-        // }
-        // if(n==1){
-        //     return 1;
-        // }
-        // return climbStairs(n-1) + climbStairs(n-2); 
+        
+    //     if(n==0 || n==1){
+    //         return 1;
+    //     }
+    //     if(n==2){
+    //         return n;
+    //     }
+    //     return climbStairs(n-1) + climbStairs(n-2); 
     }
 
 int main(){

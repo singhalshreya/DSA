@@ -4,7 +4,7 @@ void merge(int *a, int *b, int*c, int s, int e){
 	int m= (s+e)/2;
 	int i= s, j=m+1, k=s;
 
-	while(i<= m and j<=e){
+	while(i<= m && j<=e){
 		if(b[i]> c[j]){
 			a[k++] = c[j++];
 		}else{

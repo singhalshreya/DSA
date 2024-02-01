@@ -1,4 +1,5 @@
-// Given an array Arr of size N containing positive integers. Find the maximum sum of a subsequence such that no two numbers in the sequence should be adjacent in the array.
+// Given an array Arr of size N containing positive integers.
+// Find the maximum sum of a subsequence such that no two numbers in the sequence should be adjacent in the array.
 
 // Example 1:
 
@@ -59,12 +60,20 @@ int helper2(int index, int *arr, vector<int> &dp){
         cout<<findMaxSum(arr, n, dp);
 
         // Tabulation
+        // int n = arr.size();
         vector<int> dpp(n,0);
         dpp[0] = arr[0];
-        int max_ans = INT_MAX;
-        // for(int i=1;i<n;i++){
-            
-        //     dpp[i] = 
-        // }
+        dpp[1] = arr[1];
+		for(int i=2;i<n;i++){
+			// int pick = arr[i];
+			int pick = arr[i] + dpp[i-2];
+			int notpick = 0+ dpp[i-1];
+			dpp[i] = max(pick, notpick);
 
+		}  
+return dpp[n-1];
     }
+
+
+
+	

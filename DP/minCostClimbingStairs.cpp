@@ -1,4 +1,5 @@
-// Given an array of integers cost[] of length N, where cost[i] is the cost of the ith step on a staircase. Once the cost is paid, you can either climb one or two steps.
+// Given an array of integers cost[] of length N, where cost[i] is the cost of the ith step on a staircase. 
+// Once the cost is paid, you can either climb one or two steps.
 // You can either start from the step with index 0, or the step with index 1.
 // Return the minimum cost to reach the top of the floor.
 // Input:
@@ -20,7 +21,7 @@ int helper(int index,int N, vector<int> &cost, vector<int> &dp){
           return 0;
       }
        
-      if(dp[index] !=-1){
+      if(dp[index]!= -1){
           return dp[index];
       }
       int c1 = cost[index] + helper(index+1,N, cost, dp);
